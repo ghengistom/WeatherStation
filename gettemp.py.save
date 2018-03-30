@@ -1,0 +1,30 @@
+import datetime
+import sqlite3
+import time
+import random
+from w1thermsensor import W1ThermSensor
+from time import gmtime, strftime
+
+#connect to DB
+conn = sqlite3.connect('weatherdatabase.db')
+c = conn.cursor()
+
+
+for sensor in W1ThermSensor.get_available_sensors():
+    while True:
+    
+        far = sensor.get_temperature()*9/5 + 32 
+        print("Sensor %s has temperature %.2f" % (sensor.id, sensor.get_temperature()))
+	print(far)
+
+
+        #insert a row of data
+        unix = int(time.time())
+        date = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
+        keyword = 'Python'
+#        value = random.randrage(0,10)
+
+        c.execute("INSERT INTO timetemp values ( date, far)" )
+        conn.commit()
+        conn.close()
+print("all done")
