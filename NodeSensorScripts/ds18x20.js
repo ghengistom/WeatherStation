@@ -21,14 +21,6 @@ function myFunction() {
 }
 
 
-
-
-
-
-function getTemp() {
-
-
-
     console.log('inside funct');
 
 
@@ -76,20 +68,6 @@ function getTemp() {
         console.log('this is sensor.getAll', tempObj);
         console.log('this is the error', err);
     });
-
-
-
-
-
-  
-
-
-
-
-
-
-
-}
 
 
 
