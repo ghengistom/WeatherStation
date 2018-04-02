@@ -10,11 +10,11 @@ function myFunction() {
     setInterval(function(){
             
             sensor.get('28-000006e0e2ae', function (err, temp) {
-    
-    
+               
                console.log('in sensor.get with sensorid = ', sensorid);
                console.log('this is sensor.get', temp);
-               console.log('this is the error', err);
+               console.log('thi is sensor.get err message', err);
+               
             })
     }, 3000);
     
