@@ -6,7 +6,7 @@ const getTemp = require('./ds18x20.js');
 
 function insertToDB(){
 
-    let db = new sqlite3.Database('../weatherdatabase.db');
+    let db = new sqlite3.Database('/home/pi/TempSensor/weatherdatabase.db');
 
     var temp1 = getTemp.getTempOnInterval();
 
