@@ -21,15 +21,7 @@ function myFunction() {
 }
 
 
-    console.log('inside funct');
-
-
-
-    console.log('inside while loop');
-
-
-    //setTimeout(sensor.loadDriver, 1000);
-
+    
 
     sensor.loadDriver(function (err) {
         if (err) console.log('something went wrong loading the driver:', err)
@@ -37,11 +29,6 @@ function myFunction() {
             console.log('driver is loaded');
             myFunction();
         }
-    });
-
-
-    sensor.isDriverLoaded(function (err, isLoaded) {
-        console.log('this is sensor.isDriverLoaded', isLoaded);
     });
 
 
@@ -68,7 +55,6 @@ function myFunction() {
         console.log('this is sensor.getAll', tempObj);
         console.log('this is the error', err);
     });
-
 
 
 
