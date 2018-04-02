@@ -15,7 +15,7 @@ function myFunction() {
                console.log('this is sensor.get', temp);
                console.log('thi is sensor.get err message', err);
 
-               if(err)
+               if(!err)
                {
                    console.log('err is true');
                }
