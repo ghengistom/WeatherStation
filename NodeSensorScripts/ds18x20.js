@@ -9,15 +9,16 @@ var myVar;
 function myFunction() {
     setInterval(function(){
             
-            sensor.get('28-000006e0e2ae', function (err, temp) {
-               
-               console.log('in sensor.get with sensorid = ', sensorid);
-               console.log('this is sensor.get', temp);
-               console.log('thi is sensor.get err message', err);
-
+            sensor.get('28-000006e0e2ae', function (err, temp) {          
+              
                if(!err)
                {
-                   console.log('err is true');
+                   console.log('The sensor id is:  =  ', sensorid);
+                   console.log('The temperature is: ', temp, ' degree celcius.');
+     
+               }
+               else{
+                   console.log('Error for sensor.get is : ', err);
                }
                
             })
