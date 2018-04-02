@@ -1,5 +1,5 @@
 
-
+const dbCall = require('./databaseCalls.js');
 var sensor = require('ds18x20');
 var sensorid;
 
@@ -9,12 +9,12 @@ var myVar;
 function getTempOnInterval() {
     setInterval(function(){
             
-            sensor.get('28-000006e0e2ae', function (err, temp) {          
-              
+            sensor.get('28-000006e0e2ae', function (err, temp) {                        
                if(!err)
                {
                    console.log('The sensor id is:  =  ', sensorid);
                    console.log('The temperature is: ', temp, ' degree celcius.');
+                   dbCall.insertToDB();
                    return temp;
      
                }
@@ -35,6 +35,10 @@ function getTempOnInterval() {
             getTempOnInterval();
         }
     });
+
+
+/*Insert one row into a table */
+
 
 
     // sensor.list(function (err, listOfDeviceIds) {
