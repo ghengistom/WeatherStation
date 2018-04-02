@@ -1,4 +1,5 @@
-const sqlite3 = require('sqlite3').verbose();
+//const sqlite3 = require('sqlite3').verbose();
+var sqlite3 = require('sqlite3').verbose();
 var date = new Date();
 const getTemp = require('./ds18x20.js');
 
