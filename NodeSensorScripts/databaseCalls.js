@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-var d = new Date();
+var date = new Date();
 const getTemp = require('./ds18x20.js');
 
 
@@ -12,7 +12,7 @@ function insertToDB(){
 
 
     // insert one row into the langs table
-    db.run(`INSERT INTO time(name) VALUES(?)`, [ d , temp ], function(err) {
+    db.run(`INSERT INTO timetemp(time, temp) VALUES(?,?)`, [ date , temp ], function(err) {
     if (err) {
         return console.log(err.message);
     }
@@ -25,4 +25,3 @@ function insertToDB(){
 
 
 }
-
