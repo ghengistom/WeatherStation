@@ -37,16 +37,16 @@ function getTempOnInterval() {
     });
 
 
-    sensor.list(function (err, listOfDeviceIds) {
+    // sensor.list(function (err, listOfDeviceIds) {
 
-        console.log('this is sensor.list', listOfDeviceIds);
-        sensorid = listOfDeviceIds;
-        console.log('Sensorid = ', sensorid);
+    //     console.log('this is sensor.list', listOfDeviceIds);
+    //     sensorid = listOfDeviceIds;
+    //     console.log('Sensorid = ', sensorid);
 
-        sensor.get(sensorid, function (err, temp) {
-            console.log('this is sensor.get inside sensor.list', temp)
-        });
-    });
+    //     sensor.get(sensorid, function (err, temp) {
+    //         console.log('this is sensor.get inside sensor.list', temp)
+    //     });
+    // });
 
     // sensor.getAll(function (err, tempObj) {
     //     console.log('this is sensor.getAll', tempObj);
