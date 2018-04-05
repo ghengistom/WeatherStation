@@ -31,7 +31,7 @@ for sensor in W1ThermSensor.get_available_sensors():
         c = conn.cursor()
         far = sensor.get_temperature()*9/5 + 32 
         print("Sensor %s has temperature %.2f" % (sensor.id, sensor.get_temperature()))
-	print(far)
+        print(far)
 
 
         #insert a row of data into local db
