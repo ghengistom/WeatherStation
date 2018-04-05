@@ -16,7 +16,7 @@ print(len(hash))
 
 for sensor in W1ThermSensor.get_available_sensors():
     while True:
-       print('in while loop')
+        print('in while loop')
         conn = sqlite3.connect('weatherdatabase.db')
         c = conn.cursor()
         far = sensor.get_temperature()*9/5 + 32 
