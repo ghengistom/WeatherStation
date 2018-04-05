@@ -1,6 +1,6 @@
 import datetime
 import hashlib
-import pypyodbc
+#import pypyodbc
 import sqlite3
 import time
 import random
