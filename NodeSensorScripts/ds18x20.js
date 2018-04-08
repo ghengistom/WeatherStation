@@ -8,7 +8,7 @@ var myVar;
 
 function getTempOnInterval() {
     setInterval(function(){
-<<<<<<< HEAD
+//<<<<<<< HEAD
             
                sensor.get('28-000006e0e2ae', function (err, temp) {
       
@@ -20,7 +20,6 @@ function getTempOnInterval() {
     
 }
 
-=======
 
             sensor.get('28-000006e0e2ae', function (err, temp) {
                if(!err)
