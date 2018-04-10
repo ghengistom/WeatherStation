@@ -1,4 +1,4 @@
-const dbCall = require('./databaseCalls.js');
+//const dbCall = require('./databaseCalls.js');
 var sensor = require('ds18x20');
 var sensorid;
 
@@ -24,7 +24,7 @@ function getTempOnInterval() {
                if(!err){
                    console.log('The sensor id is:  =  ', sensorid);
                    console.log('The temperature is: ', temp, ' degree celcius.');
-                   dbCall.insertToDB();
+                  // dbCall.insertToDB();
                    return temp;
 
                }
