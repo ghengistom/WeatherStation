@@ -43,7 +43,7 @@ function getTempOnInterval() {
                    }
       
                    exec('w1thermsensor all --type DS18B20 --json', function (err, stdout, stderr){
-
+                        console.log(stdout);
                    });
 
 
