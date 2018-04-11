@@ -42,9 +42,10 @@ function getTempOnInterval() {
                        console.log('The error for sensor.get is: ', err);
                    }
       
-                   exec('echo "w1thermsensor all --type DS18B20 --json"', function (err, stdout, stderr){
+                   var temp = exec('echo "w1thermsensor all --type DS18B20 --json"', function (err, stdout, stderr){
                         console.log(stdout);
                    });
+                   console.log(temp);
 
 
 
