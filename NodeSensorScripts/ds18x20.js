@@ -1,8 +1,9 @@
 var sensor = require('ds18x20');
 var sensorid;
 var myVar;
-var util = require('util');
-const exec = util.promisify(require('child_process').exec);
+//var util = require('util');
+//const exec = util.promisify(require('child_process').exec);
+var exec = require('child_process').exec;
 
 
 
@@ -23,11 +24,11 @@ sensor.isDriverLoaded(function (err, isLoaded) {
 
 
 function getTempOnInterval() {
-    
-    async function getweather(){
-        const { stdout, stderr } = await exec('getweather');
-        console.log('w1thermsensor all --type DS18B20 --json;');
-    }
+
+    // async function getweather(){
+    //     const { stdout, stderr } = await exec('getweather');
+    //     console.log('w1thermsensor all --type DS18B20 --json;');
+    // }
     
     setInterval(function(){
             
@@ -41,10 +42,17 @@ function getTempOnInterval() {
                        console.log('The error for sensor.get is: ', err);
                    }
       
+                   exec('w1thermsensor all --type DS18B20 --json', function (err, stdout, stderr){
+
+                   });
+
+
+
+
               
             }, 6000);
 
-            getweather();
+            // getweather();
 
 
     }, 3000);
