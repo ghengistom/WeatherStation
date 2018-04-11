@@ -1,8 +1,8 @@
 var sensor = require('ds18x20');
 var sensorid;
-
-
 var myVar;
+var util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
 
 
@@ -13,6 +13,13 @@ sensor.loadDriver(function (err) {
         getTempOnInterval();
     }
 });
+
+
+async function getweather(){
+    const { stdout, stderr } = await exec('getweather');
+    console.log('w1thermsensor all --type DS18B20 --json;');
+}
+
 
 
 
@@ -37,27 +44,18 @@ function getTempOnInterval() {
       
               
             }, 6000);
+
+            getweather();
+
+
     }, 3000);
     
+
+    //call command line version from a different library can return json
+
+
 }
 
-
-            // sensor.get('28-000006e0e2ae', function (err, temp) {
-            //    if(!err){
-            //        console.log('The sensor id is:  =  ', sensorid);
-            //        console.log('The temperature is: ', temp, ' degree celcius.');
-            //       // dbCall.insertToDB();
-            //        return temp;
-
-            //    }
-            //    else{
-            //        console.log('Error for sensor.get is : ', err);
-            //    }
-
-            // }, 6000);
-
-
-  
 
 //=======
 /*Insert one row into a table */
