@@ -15,13 +15,6 @@ sensor.loadDriver(function (err) {
 });
 
 
-async function getweather(){
-    const { stdout, stderr } = await exec('getweather');
-    console.log('w1thermsensor all --type DS18B20 --json;');
-}
-
-
-
 
 sensor.isDriverLoaded(function (err, isLoaded) {
     console.log('this is sensor.isDriverLoaded', isLoaded);
@@ -30,6 +23,12 @@ sensor.isDriverLoaded(function (err, isLoaded) {
 
 
 function getTempOnInterval() {
+    
+    async function getweather(){
+        const { stdout, stderr } = await exec('getweather');
+        console.log('w1thermsensor all --type DS18B20 --json;');
+    }
+    
     setInterval(function(){
             
                sensor.get('28-000006e0e2ae', function (err, temp) {
