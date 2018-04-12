@@ -1,7 +1,7 @@
 var sensor = require('ds18x20');
 var sensorid;
 var myVar;
-var sqlite3 = ('./databaseCalls.js');
+var sqlite3 = require('./databaseCalls.js');
 //var util = require('util');
 //const exec = util.promisify(require('child_process').exec);
 var exec = require('child_process').exec;
@@ -53,9 +53,6 @@ function getTempOnInterval() {
 
                    //Make data base call
                    sqlite3.insertToDB(time1, temp1);
-
-
-
 
               
             }, 6000);
