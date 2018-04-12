@@ -8,6 +8,8 @@ var temp1;
 
 function insertToDB(time1, temp1){
 
+    console.log('inside databaseCalls.js this is what time1 = ' + time1);
+
     let db = new sqlite3.Database('/home/pi/TempSensor/weatherdatabase.db');
 
     var temp1 = getTemp.getTempOnInterval();
