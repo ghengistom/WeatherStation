@@ -6,6 +6,8 @@ const getTemp = require('./ds18x20.js');
 var time1;
 var temp1;
 
+console.log('made it inside databaseCalls.js  ');
+
 function insertToDB(time1, temp1){
 
     console.log('inside databaseCalls.js this is what time1 = ' + time1);
