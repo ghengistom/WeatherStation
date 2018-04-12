@@ -1,6 +1,7 @@
 var sensor = require('ds18x20');
 var sensorid;
 var myVar;
+var sqlite3 = ('./databaseCalls.js');
 //var util = require('util');
 //const exec = util.promisify(require('child_process').exec);
 var exec = require('child_process').exec;
@@ -31,11 +32,14 @@ function getTempOnInterval() {
     // }
     
     setInterval(function(){
+        var time1 = new Date();
+        var temp1;
             
                sensor.get('28-000006e0e2ae', function (err, temp) {
                    if(!err){
                       console.log('The sensor id is:  =  ', sensorid);
                       console.log('The temperature is: ', temp, ' degree celcius.');
+                      temp1 = temp;
                       return temp;
                    }
                    else{
@@ -46,6 +50,9 @@ function getTempOnInterval() {
                         console.log(stdout);
                    });
                    console.log(temp);
+
+                   //Make data base call
+                   sqlite3.insertToDB(time1, temp1);
 
 
 
