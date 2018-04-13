@@ -1,7 +1,7 @@
 var sensor = require('ds18x20');
 var sensorid;
 var myVar;
-var sqlite3 = require('./databaseCalls.js');
+//var sqlite3 = require('./databaseCalls.js');
 //var util = require('util');
 //const exec = util.promisify(require('child_process').exec);
 var exec = require('child_process').exec;
