@@ -52,7 +52,7 @@ function getTempOnInterval() {
                    console.log(temp);
 
                    //Make data base call
-                   sqlite3.insertToDB(time1, temp1);
+                 //  sqlite3.insertToDB(time1, temp1);
 
               
             }, 6000);
