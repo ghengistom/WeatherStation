@@ -8,6 +8,8 @@ import random
 from w1thermsensor import W1ThermSensor
 from time import gmtime, strftime
 import subprocess
+import json
+
 
 #create 64bit hash for pi id
 hash = hashlib.sha1("my message".encode("UTF-8")).hexdigest()
@@ -38,7 +40,12 @@ for sensor in W1ThermSensor.get_available_sensors():
   
 #        subprocess.Popen('w1thermsensor get 1', shell=True, stdout=subprocess.call(['df', '-h'])).stdout.read()
 #        os.system('w1thermsensor get 1')
-        os.system('w1thermsensor all --type DS18B20 --json')
+
+        jsonData = os.system('w1thermsensor all --type DS18B20 --json')
+
+        #test print jsonData in python to see if it worked
+        jsonToPython = json.loads(jsonData)
+#        print (jsonToPython['temperature'])
 
         conn.commit()
         time.sleep(20)
