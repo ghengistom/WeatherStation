@@ -38,17 +38,14 @@ for sensor in W1ThermSensor.get_available_sensors():
         #commit and close connection for local db
         
 
-<<<<<<< HEAD
         #proc = subprocess.check_call('w1thermsensor all --type DS18B20 --json')
         tempJson = w1thermsensor get 1  # show results in JSON format
         print('this is temp using w1thermsensor get command ' + tempJson)
         #(out, err) = proc.communicate()
         #print "program output:", out
-=======
         proc = subprocess.Popen('w1thermsensor all --type DS18B20 --json')
         (out, err) = proc.communicate()
         print ("program output:", out)
->>>>>>> 0deceb5dae699baa23adc1808e6ea41d59e23415
 
   
         #subprocess.Popen('w1thermsensor get 1', shell=True, stdout=subprocess.call(['df', '-h'])).stdout.read()
