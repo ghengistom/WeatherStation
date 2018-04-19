@@ -47,7 +47,7 @@ for sensor in W1ThermSensor.get_available_sensors():
             W1ThermSensor.KELVIN])    
        
 
-        print('The temperature from new API is '+ temperature_in_fahrenheit)
+        print('The temperature from new API is '+ str(temperature_in_fahrenheit))
 
         
         conn.commit()
