@@ -38,16 +38,16 @@ for sensor in W1ThermSensor.get_available_sensors():
         #commit and close connection for local db
         
   
-#        subprocess.Popen('w1thermsensor get 1', shell=True, stdout=subprocess.call(['df', '-h'])).stdout.read()
+        subprocess.Popen('w1thermsensor get 1', shell=True, stdout=subprocess.call(['df', '-h'])).stdout.read()
 #        os.system('w1thermsensor get 1')
 
-        jsonData = os.system('w1thermsensor all --type DS18B20 --json')
+#        jsonData = os.system('w1thermsensor all --type DS18B20 --json')
         #jsonData = json.loads(os.system('w1thermsensor all --type DS18B20 --json')
        
 
         #test print jsonData in python to see if it worked
-        jsonToPython = json.loads(str(jsonData))
-        print('hello' + str(jsonToPython))
+#        jsonToPython = json.loads(str(jsonData))
+#        print('hello' + str(jsonToPython))
 #        print("hello")
         conn.commit()
         time.sleep(20)
