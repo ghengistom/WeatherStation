@@ -42,11 +42,13 @@ for sensor in W1ThermSensor.get_available_sensors():
 #        os.system('w1thermsensor get 1')
 
         jsonData = os.system('w1thermsensor all --type DS18B20 --json')
+        #jsonData = json.loads(os.system('w1thermsensor all --type DS18B20 --json')
+       
 
         #test print jsonData in python to see if it worked
-        jsonToPython = json.loads(jsonData)
-#        print (jsonToPython['temperature'])
-
+        jsonToPython = json.loads(str(jsonData))
+        print('hello' + str(jsonToPython))
+#        print("hello")
         conn.commit()
         time.sleep(20)
         conn.close()
