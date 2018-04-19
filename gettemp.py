@@ -36,29 +36,17 @@ for sensor in W1ThermSensor.get_available_sensors():
                    VALUES(?,?)''', (date, far))
 
         #commit and close connection for local db
-        
+        from w1thermsensor import W1ThermSensor
 
-        #proc = subprocess.check_call('w1thermsensor all --type DS18B20 --json')
-        tempJson = w1thermsensor get 1  # show results in JSON format
-        print('this is temp using w1thermsensor get command ' + tempJson)
-        #(out, err) = proc.communicate()
-        #print "program output:", out
-        proc = subprocess.Popen('w1thermsensor all --type DS18B20 --json')
-        (out, err) = proc.communicate()
-        print ("program output:", out)
-
-  
-        #subprocess.Popen('w1thermsensor get 1', shell=True, stdout=subprocess.call(['df', '-h'])).stdout.read()
-#        os.system('w1thermsensor get 1')
-
-#        jsonData = os.system('w1thermsensor all --type DS18B20 --json')
-        #jsonData = json.loads(os.system('w1thermsensor all --type DS18B20 --json')
+        sensor = W1ThermSensor()
+        temperature_in_celsius = sensor.get_temperature()
+        temperature_in_fahrenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
+        temperature_in_all_units = sensor.get_temperatures([
+            W1ThermSensor.DEGREES_C,
+            W1ThermSensor.DEGREES_F,
+            W1ThermSensor.KELVIN])    
        
-
-        #test print jsonData in python to see if it worked
-#        jsonToPython = json.loads(str(jsonData))
-#        print('hello' + str(jsonToPython))
-#        print("hello")
+        
         conn.commit()
         time.sleep(20)
         conn.close()
