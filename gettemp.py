@@ -1,13 +1,10 @@
-import os
 import datetime
 import hashlib
-#import pypyodbc
 import sqlite3
 import time
 import random
 from w1thermsensor import W1ThermSensor
 from time import gmtime, strftime
-import subprocess
 import json
 
 
@@ -46,10 +43,8 @@ for sensor in W1ThermSensor.get_available_sensors():
             W1ThermSensor.DEGREES_F,
             W1ThermSensor.KELVIN])    
        
-
         print('The temperature from new API is '+ str(temperature_in_fahrenheit))
 
-        
         conn.commit()
         time.sleep(20)
         conn.close()
