@@ -37,12 +37,14 @@ for sensor in W1ThermSensor.get_available_sensors():
 
         sensor = W1ThermSensor()
         temperature_in_celsius = sensor.get_temperature()
+        jsonTest = json.loads(str(temperature_in_celsius))
         temperature_in_fahrenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
         temperature_in_all_units = sensor.get_temperatures([
             W1ThermSensor.DEGREES_C,
             W1ThermSensor.DEGREES_F,
             W1ThermSensor.KELVIN])    
        
+        print('Print jsonTest '  + str(jsonTest))
         print('The temperature from new API is '+ str(temperature_in_fahrenheit))
 
         conn.commit()
