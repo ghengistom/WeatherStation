@@ -33,7 +33,6 @@ for sensor in W1ThermSensor.get_available_sensors():
                    VALUES(?,?)''', (date, far))
 
         #commit and close connection for local db
-        from w1thermsensor import W1ThermSensor
 
         sensor = W1ThermSensor()
         temperature_in_celsius = sensor.get_temperature()
