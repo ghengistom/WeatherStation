@@ -5,5 +5,5 @@ c = conn.cursor()
 
 mylist = '"""' + c.execute('SELECT * FROM timetemp) + '"""'
 #print(c.fetchall())   #print '"' + my_str + '"'
-print(mylist)
+print('"""' + mylist + '"""')
 
