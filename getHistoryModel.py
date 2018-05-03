@@ -4,4 +4,4 @@ c = conn.cursor()
 
 
 mylist = ''.join(c.execute('SELECT * FROM timetemp))
-print(c.fetchall())
+print('"' + c.fetchall() + '"')   #print '"' + my_str + '"'
