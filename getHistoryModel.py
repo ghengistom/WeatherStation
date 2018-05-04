@@ -5,7 +5,12 @@ c = conn.cursor()
 
 c.execute(""" select * from timetemp """)
 data=c.fetchall()
-print(data)
+
+for i,j in data:
+    print(i)
+    print(j)
+
+#print(data)
 
 #c.execute('SELECT * FROM timetemp)
 #print(c.fetchall())   #print '"' + my_str + '"'
