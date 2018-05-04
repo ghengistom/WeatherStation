@@ -15,7 +15,7 @@ toJson = json.dumps(data)
 #     print(i)
 #     print(j)
 
-for i in toJson
+for i in toJson:
     print(i)
 
 #print(data)
