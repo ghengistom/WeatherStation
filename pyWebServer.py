@@ -1,7 +1,7 @@
 import importlib
 
 #moduleName = input('Enter module name:')
-moduleName = input('/home/pi/WeatherStation/getHistoryModel.py')
+moduleName = input('getHistoryModel.py')
 importlib.import_module(moduleName)
 
 
