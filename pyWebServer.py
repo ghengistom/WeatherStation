@@ -1,5 +1,12 @@
-import os
-os.system("/home/pi/WeatherStation/getHistoryModel.py")
+import importlib
+
+#moduleName = input('Enter module name:')
+moduleName = input('/home/pi/WeatherStation/getHistoryModel.py')
+importlib.import_module(moduleName)
+
+
+#import os
+#os.system("/home/pi/WeatherStation/getHistoryModel.py")
 
 from flask import Flask
 app = Flask(__name__)
