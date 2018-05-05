@@ -1,14 +1,15 @@
 import sqlite3
 import json
 
-conn = sqlite3.connect('weatherdatabase.db')
-c = conn.cursor()
+def getHistory():
+  conn = sqlite3.connect('weatherdatabase.db')
+  c = conn.cursor()
 
 
-c.execute(""" select * from timetemp """)
-data=c.fetchall()
+  c.execute(""" select * from timetemp """)
+  data=c.fetchall()
 
-toJson = json.dumps(data)
+  toJson = json.dumps(data)
 
 
 # for i,j in data:
@@ -17,7 +18,7 @@ toJson = json.dumps(data)
 
 # for i in toJson:
 #     print(i)
-print(toJson)
+  print(toJson)
 
 #print(data)
 
