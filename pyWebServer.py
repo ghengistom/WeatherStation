@@ -1,5 +1,5 @@
 import os
-os.system("getHistoryModel.py")
+os.system("/home/pi/WeatherStation/getHistoryModel.py")
 
 from flask import Flask
 app = Flask(__name__)
