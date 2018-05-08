@@ -12,7 +12,7 @@ def getHistory():
   toJson = json.dumps(data)
   print(toJson)
 
-  retrun toJson
+  return toJson
 
 # for i,j in data:
 #     print(i)
