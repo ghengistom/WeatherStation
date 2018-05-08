@@ -10,7 +10,9 @@ def getHistory():
   data=c.fetchall()
 
   toJson = json.dumps(data)
+  print(toJson)
 
+  retrun toJson
 
 # for i,j in data:
 #     print(i)
@@ -18,7 +20,7 @@ def getHistory():
 
 # for i in toJson:
 #     print(i)
-  print(toJson)
+  
 
 #print(data)
 
