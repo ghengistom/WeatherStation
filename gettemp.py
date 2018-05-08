@@ -19,11 +19,10 @@ for sensor in W1ThermSensor.get_available_sensors():
     while True:
         conn = sqlite3.connect('weatherdatabase.db')
         c = conn.cursor()
-        far = sensor.get_temperature()*9/5 + 32 
-        print("Sensor %s has temperature %.2f" % (sensor.id, sensor.get_temperature()))
-        print(far)
+        #far = sensor.get_temperature()*9/5 + 32 
+        #print("Sensor %s has temperature %.2f" % (sensor.id, sensor.get_temperature()))
+        #print(far)
 
-        #insert a row of data into local db
         unix = int(time.time())
         date = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
 #        keyword = 'Python'
@@ -35,17 +34,18 @@ for sensor in W1ThermSensor.get_available_sensors():
         temperature_in_celsius = sensor.get_temperature()
         jsonTest = json.loads(str(temperature_in_celsius))
         temperature_in_fahrenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
-        temperature_in_all_units = sensor.get_temperatures([
-            W1ThermSensor.DEGREES_C,
-            W1ThermSensor.DEGREES_F,
-            W1ThermSensor.KELVIN])    
+        # temperature_in_all_units = sensor.get_temperatures([
+        #     W1ThermSensor.DEGREES_C,
+        #     W1ThermSensor.DEGREES_F,
+        #     W1ThermSensor.KELVIN])    
 
+        #insert a row of data into local db
         c.execute('''INSERT INTO timetemp( time, temp )
                    VALUES(?,?)''', (date, temperature_in_fahrenheit))
        
         print('Print jsonTest '  + str(jsonTest))
         print('The temperature from new API is '+ str(temperature_in_fahrenheit))
-        print('This is the temp is all units' + str(temperature_in_all_units))
+        #print('This is the temp is all units' + str(temperature_in_all_units))
 
         conn.commit()
         time.sleep(20)
