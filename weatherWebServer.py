@@ -10,6 +10,14 @@ def get_history():
     return getHistoryModel.getHistory()
 
 
+@app.route('/test1', methods=['GET']) #GET requests will be blocked
+def test1():
+    return 'Todo...'   #need to call getHistoryModel.py then return json 
+
+
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
 # if __name__ == '__main__':
