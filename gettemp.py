@@ -9,14 +9,14 @@ import json
 
 
 #create 64bit hash for pi id
-hash = hashlib.sha1("my message".encode("UTF-8")).hexdigest()
-print(hash)
-print(len(hash))
+# hash = hashlib.sha1("my message".encode("UTF-8")).hexdigest()
+# print(hash)
+# print(len(hash))
+
 
 
 for sensor in W1ThermSensor.get_available_sensors():
     while True:
-        print('in while loop')
         conn = sqlite3.connect('weatherdatabase.db')
         c = conn.cursor()
         far = sensor.get_temperature()*9/5 + 32 
@@ -29,9 +29,6 @@ for sensor in W1ThermSensor.get_available_sensors():
 #        keyword = 'Python'
 #        value = random.randrage(0,10)
 
-        c.execute('''INSERT INTO timetemp( time, temp )
-                   VALUES(?,?)''', (date, far))
-
         #commit and close connection for local db
 
         sensor = W1ThermSensor()
@@ -42,6 +39,9 @@ for sensor in W1ThermSensor.get_available_sensors():
             W1ThermSensor.DEGREES_C,
             W1ThermSensor.DEGREES_F,
             W1ThermSensor.KELVIN])    
+
+        c.execute('''INSERT INTO timetemp( time, temp )
+                   VALUES(?,?)''', (date, temperature_in_fahrenheit))
        
         print('Print jsonTest '  + str(jsonTest))
         print('The temperature from new API is '+ str(temperature_in_fahrenheit))

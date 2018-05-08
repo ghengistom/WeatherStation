@@ -6,8 +6,6 @@ var myVar;
 //const exec = util.promisify(require('child_process').exec);
 var exec = require('child_process').exec;
 
-
-
 sensor.loadDriver(function (err) {
     if (err) console.log('something went wrong loading the driver: ', err)
     else {
@@ -17,11 +15,9 @@ sensor.loadDriver(function (err) {
 });
 
 
-
 sensor.isDriverLoaded(function (err, isLoaded) {
     console.log('this is sensor.isDriverLoaded', isLoaded);
 });
-
 
 
 function getTempOnInterval() {
@@ -59,20 +55,12 @@ function getTempOnInterval() {
 
             // getweather();
 
-
-    }, 3000);
-    
-
+    }, 3000); 
     //call command line version from a different library can return json
-
-
 }
-
 
 //=======
 /*Insert one row into a table */
-
-
 
     // sensor.list(function (err, listOfDeviceIds) {
 
@@ -89,4 +77,3 @@ function getTempOnInterval() {
     //     console.log('this is sensor.getAll', tempObj);
     //     console.log('this is the error', err);
     // });
-

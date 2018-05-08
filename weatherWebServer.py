@@ -1,4 +1,5 @@
 import getHistoryModel
+import gettemp
 from flask import jsonify
 from flask import Flask, request #import main Flask class and request object
 
@@ -9,6 +10,11 @@ app = Flask(__name__) #create the Flask app
 def get_history():
     h = getHistoryModel.getHistory()
     return jsonify(h)
+
+
+@app.route('/gettemp', method=['GET'])
+def get_temp():
+    
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
