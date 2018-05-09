@@ -15,7 +15,7 @@ def get_history():
 @app.route('/gettemp', methods=['GET'])
 def get_temp():
     j = gettemp.gettemp_()
-
+    return 'fire off gettemp method'
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
