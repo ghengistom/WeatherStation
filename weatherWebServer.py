@@ -14,8 +14,8 @@ def get_history():
 
 @app.route('/gettemp', method=['GET'])
 def get_temp():
-    gt = get_temp.gettemp_()
-    
+    get_temp.gettemp_()
+
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
