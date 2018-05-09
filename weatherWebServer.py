@@ -12,8 +12,9 @@ def get_history():
     return jsonify(h)
 
 
-# @app.route('/gettemp', method=['GET'])
-# def get_temp():
+@app.route('/gettemp', method=['GET'])
+def get_temp():
+    gt = get_temp.gettemp_()
     
 
 
