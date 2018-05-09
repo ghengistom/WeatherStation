@@ -14,7 +14,7 @@ def get_history():
 
 @app.route('/gettemp', method=['GET'])
 def get_temp():
-    return get_temp.gettemp_()
+    gettemp.gettemp_()
 
 
 
