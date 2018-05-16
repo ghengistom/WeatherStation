@@ -9,11 +9,11 @@ def getHistory():
   c.execute(""" select * from timetemp """)
   data=c.fetchall()
 
-  toJson = json.dumps(data)
+  #toJson = json.dumps(data)
   #print(toJson)
 
-  return toJson
-
+  #return toJson
+  return data
 
 
 
