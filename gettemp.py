@@ -49,7 +49,7 @@ def gettemp_():
 
             tojson = json.dumps(temperature_in_fahrenheit)
             jsonloads = json.loads(temperature_in_fahrenheit)
-            print('json.loads format : ' + jsonloads)
+            print('json.loads format : ' + str(jsonloads))
             conn.commit()
             conn.close()
             return tojson
