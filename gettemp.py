@@ -48,11 +48,11 @@ def gettemp_():
         #print('This is the temp is all units' + str(temperature_in_all_units))
 
             tojson = json.dumps(temperature_in_fahrenheit)
-            
+            print('Json dumps format : ' + tojson)
             conn.commit()
             conn.close()
             return tojson
-            print('Json dumps format : ' + tojson)
+            
 
 gettemp_()
             #time.sleep(20)
