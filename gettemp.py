@@ -54,7 +54,7 @@ def gettemp_():
             return tojson
             print('Json dumps format : ' + tojson)
 
-            
+gettemp_()
             #time.sleep(20)
             
             
