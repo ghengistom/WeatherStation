@@ -11,7 +11,7 @@ def getHistory():
 
   toJson = json.dumps(data)
   
-  print('jsondumps ' + toJson
+  print('jsondumps ' + toJson)
 
   #return toJson
   return data
