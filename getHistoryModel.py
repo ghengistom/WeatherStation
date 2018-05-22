@@ -10,7 +10,7 @@ def getHistory():
 
   toJson = json.dumps(data)
 
-  getone = toJson[20]
+  getone = toJson[21]
   print('contents of getone' + getone)
   #print(data)
   #return toJson
