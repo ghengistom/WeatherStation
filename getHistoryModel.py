@@ -11,8 +11,8 @@ def getHistory():
 
   toJson = json.dumps(data)
 
-  
-  print(toJson.split(',')) 
+  split1 = toJson.split(',')
+  print(split1.split(',')) 
   
   #print(data)
   #return toJson
