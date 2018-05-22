@@ -8,9 +8,14 @@ app = Flask(__name__) #create the Flask app
 
 @app.route('/gethistory', methods=['GET']) #GET requests will be blocked
 def get_history():
-    h = getHistoryModel.getHistory()
-    return jsonify(h)
-
+    response = app.response_class(
+        response=json.dumps(getHistoryModel.getHistory()),
+        status=200,
+        mimetype='application/json'
+    )
+    #h = getHistoryModel.getHistory()
+    #return jsonify(h)
+    return response
 
 @app.route('/gettemp', methods=['GET'])
 def get_temp():
