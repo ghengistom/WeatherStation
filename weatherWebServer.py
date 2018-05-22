@@ -1,5 +1,6 @@
 import getHistoryModel
 import gettemp
+from flask import json
 from flask import jsonify
 from flask import Flask, request #import main Flask class and request object
 
