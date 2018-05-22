@@ -10,7 +10,7 @@ def getHistory():
   data=c.fetchall()
 
   toJson = json.dumps(data)
-  print('fetchall version' + data)
+  print('fetchall version' + str(data))
 
   #return toJson
   return data
