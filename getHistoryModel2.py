@@ -10,7 +10,7 @@ def getHistory():
 
   toJson = json.dumps(data)
 
-  print('fetchall : ' + data)
+  print('fetchall : ' + str(data))
   print('fetchall jsondumps' + toJson)
   #return toJson
   return data
