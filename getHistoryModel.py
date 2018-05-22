@@ -10,8 +10,8 @@ def getHistory():
   data=c.fetchall()
 
   toJson = json.dumps(data)
-  toJson2 = json.dumps(toJson)
-  print('jsondumps times 2' + toJson2)
+  toJson2 = json.loads(toJson)
+  print('jsonloads ' + toJson2)
 
   #return toJson
   return data
