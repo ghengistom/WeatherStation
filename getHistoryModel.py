@@ -13,8 +13,8 @@ def getHistory():
     
 
   #return toJson
-  return toJson
+  return data
 
-getHistory()
+#getHistory()      #for debugging
 
 
