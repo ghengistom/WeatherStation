@@ -2,10 +2,10 @@ import getHistoryModel
 import gettemp
 from flask import jsonify
 from flask import Flask, request #import main Flask class and request object
-from flask_cors import CORS
+'from flask_cors import CORS
 
 app = Flask(__name__) #create the Flask app
-CORS(app)
+'CORS(app)
 
 @app.route('/gethistory', methods=['GET']) #GET requests will be blocked
 def get_history():
