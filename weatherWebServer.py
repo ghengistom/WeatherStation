@@ -23,7 +23,7 @@ def get_temp():
 
 @app.route('/gethistorypage', methods=['GET'])
 def get_historypage():
-   return render_template('gethistory.html', methods=['GET'])
+   return render_WeatherStation('gethistory.html')
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
