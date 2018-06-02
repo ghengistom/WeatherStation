@@ -21,7 +21,7 @@ def get_temp():
     return jsonify(j)
 
 
-@app.route('/gethistorypage')
+@app.route('/gethistorypage', methods=['GET'])
 def get_historypage():
    return render_template('./gethistory.html', methods=['GET'])
 
