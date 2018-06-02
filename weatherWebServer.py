@@ -20,6 +20,11 @@ def get_temp():
     return jsonify(j)
 
 
+@app.route('/gethistorypage')
+def get_historypage():
+   return render_template('gethistory.html')
+
+
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
 def test1():
     return 'Todo...'   #need to call getHistoryModel.py then return json 
