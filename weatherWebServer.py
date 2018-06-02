@@ -22,7 +22,7 @@ def get_temp():
 
 @app.route('/gethistorypage')
 def get_historypage():
-   return render_template('gethistory.html')
+   return render_template('gethistory.html', methods=['GET'])
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
