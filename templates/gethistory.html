@@ -4,7 +4,6 @@
     <title>The Weather Station</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src='/javascripts/getHistoryClient.js'></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
   </head>
@@ -12,7 +11,7 @@
     <h1>The Weather Station</h1>
     <p>Welcome to WeatherStation</p>
 
-    <div id="tester" style="width:600px;height:250px;"></div>
+    <div id="tester" style="width:80px;height:400px;"></div>
     <h2>To Do List! <br></h2>
     <p>
         1. Make a restful call to flask application <br>
@@ -29,6 +28,7 @@
             var dates = [];
             var temps = [];
             for(var i=0; i < results.length; ++i) {
+            
             dates.push(results[i][0]);
             temps.push(results[i][1]);
       }
