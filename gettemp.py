@@ -44,7 +44,7 @@ def gettemp_():
             #print('json.loads format : ' + str(jsonloads))
             conn.commit()
             conn.close()
-            return tojson
+            return tojson + date
             
 #gettemp_()             #for debugging
             
