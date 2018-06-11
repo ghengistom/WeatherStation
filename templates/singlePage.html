@@ -1,37 +1,25 @@
-<!DOCTYPE html>
-<html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<body>
 
-<body ng-app="myApp">
+<div ng-app="myApp" ng-controller="myCtrl"> 
 
-<p><a href="#/!">Main</a></p>
+<p>Today's welcome message is:</p>
 
-<a href="#!red">Red</a>
-<a href="#!green">Green</a>
-<a href="#!blue">Blue</a>
+<h1>{{myWelcome}}</h1>
 
-<div ng-view></div>
+</div>
+
+<p>The $http service requests a page on the server, and the response is set as the value of the "myWelcome" variable.</p>
 
 <script>
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "main.htm"
-    })
-    .when("/red", {
-        templateUrl : "red.htm"
-    })
-    .when("/green", {
-        templateUrl : "green.htm"
-    })
-    .when("/blue", {
-        templateUrl : "blue.htm"
-    });
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("192.168.1.208:9000/gettemp")
+  .then(function(response) {
+      $scope.myWelcome = response.data;
+  });
 });
 </script>
 
-<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
 </body>
 </html>
