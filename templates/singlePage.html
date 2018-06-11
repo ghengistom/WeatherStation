@@ -13,7 +13,9 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
   $http.get("http://192.168.1.208:9000/gettemp")
   .then(function(response) {
-      $scope.myWelcome = response.data;
+      response.document.body();
+      //$scope.myWelcome = response.data;
+      //this.data = JSON.stringify(response.json());
   });
 });
 </script>
