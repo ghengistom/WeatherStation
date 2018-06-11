@@ -17,7 +17,7 @@
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-  $http.get("192.168.1.208:9000/gettemp")
+  $http.get("http://192.168.1.208:9000/gettemp")
   .then(function(response) {
       $scope.myWelcome = response.data;
   });
