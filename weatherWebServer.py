@@ -20,6 +20,9 @@ def get_temp():
     j = gettemp.gettemp_()
     return jsonify(j)
 
+@app.route('/SinglePage', methods=['GET'])
+def singlePage():
+    return render_template('singlePage.html')
 
 @app.route('/gethistorypage', methods=['GET'])
 def get_historypage():
