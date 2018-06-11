@@ -4,13 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-<div ng-app="myApp" ng-controller="myCtrl"> 
 
-<p>Today's welcome message is:</p>
-
-<h1>{{myWelcome}}</h1>
-
-</div>
 
 <p>The $http service requests a page on the server, and the response is set as the value of the "myWelcome" variable.</p>
 
@@ -23,6 +17,15 @@ app.controller('myCtrl', function($scope, $http) {
   });
 });
 </script>
+
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+    <p>Today's welcome message is:</p>
+    
+    <h1>{{myWelcome}}</h1>
+    
+    </div>
 
 </body>
 </html>
