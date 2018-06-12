@@ -17,8 +17,9 @@ $(document).ready(function() {
             url: 'http://192.168.1.208:9000/gettemp',
             dataType: 'json',
             success: function(data) {
-                $("#results").append('all good');
-                alert(data);
+                //$("#results").append('all good');
+                //alert(data);
+                $("p").append(data);
             },
              error: function() {
                 $("#results").append("error");
