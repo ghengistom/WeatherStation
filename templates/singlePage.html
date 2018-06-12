@@ -11,7 +11,7 @@
 $(document).ready(function() {
     $("#testbutton").click(function() {
         $.ajax({
-            url: 'http://192.168.1.208:9000/SinglePage',
+            url: 'http://192.168.1.208:9000/gettemp',
             dataType: 'json',
             success: function(data) {
                 $("#results").append('all good');
