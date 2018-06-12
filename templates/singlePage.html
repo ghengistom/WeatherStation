@@ -19,8 +19,8 @@ $(document).ready(function() {
             success: function(data) {
                 //$("#results").append('all good');
                 //alert(data);
-                $("p").append(data);
-                $("br");
+                $("p").append(data).append('<br/>');
+                
             },
              error: function() {
                 $("#results").append("error");
