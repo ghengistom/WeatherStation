@@ -22,7 +22,6 @@ def get_temp():
     return jsonify(j)
 
 @app.route('/SinglePage', methods=['GET'])
-@crossdomain(origin='*')
 def singlePage():
     return render_template('singlePage.html')
 
