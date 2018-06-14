@@ -21,10 +21,11 @@ def get_temp():
 
 @app.route('/SinglePage', methods=['GET'])
 def singlePage():
-    response = render_template('singlePage.html')
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
-    #return render_template('singlePage.html')
+    return render_template('singlePage.html')
+    #response = render_template('singlePage.html')
+    #response.headers.add('Access-Control-Allow-Origin', '*')
+    #return response
+    
 
 @app.route('/gethistorypage', methods=['GET'])
 def get_historypage():
