@@ -39,6 +39,6 @@ def test1():
 
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc',threaded = True, host='192.168.1.208', port = 9000, debug = True)
+    app.run(threaded = True, host='192.168.1.208', port = 9000, debug = True)
 # if __name__ == '__main__':
 #     app.run(debug=True, port=5000) #run app in debug mode on port 5000
