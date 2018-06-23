@@ -17,31 +17,32 @@ import json
 def gettemp_():
     for sensor in W1ThermSensor.get_available_sensors():
         while True:
-            conn = sqlite3.connect('weatherdatabase.db')
-            c = conn.cursor()
-
+            
             unix = int(time.time())
             date = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
 
-        #commit and close connection for local db
+            #commit and close connection for local db
 
             sensor = W1ThermSensor()
-            temperature_in_celsius = sensor.get_temperature()
-            jsonTest = json.loads(str(temperature_in_celsius))
+            #temperature_in_celsius = sensor.get_temperature()
+            #jsonTest = json.loads(str(temperature_in_celsius))
             temperature_in_fahrenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
       
 
-        #insert a row of data into local db
-            c.execute('''INSERT INTO timetemp( time, temp )
-                   VALUES(?,?)''', (date, temperature_in_fahrenheit))
+            #insert a row of data into local db
+           
        
-        #print('Print jsonTest '  + str(jsonTest))
+            #print('Print jsonTest '  + str(jsonTest))
             print('The temperature from new API is '+ str(temperature_in_fahrenheit))
-        #print('This is the temp is all units' + str(temperature_in_all_units))
+            #print('This is the temp is all units' + str(temperature_in_all_units))
 
             tojson = json.dumps(temperature_in_fahrenheit)
             #jsonloads = json.loads(str(temperature_in_fahrenheit))
             #print('json.loads format : ' + str(jsonloads))
+            conn = sqlite3.connect('weatherdatabase.db')
+            c = conn.cursor()
+            c.execute('''INSERT INTO timetemp( time, temp )
+                   VALUES(?,?)''', (date, temperature_in_fahrenheit))
             conn.commit()
             conn.close()
             return tojson + "  " + date
