@@ -6,7 +6,7 @@ import random
 from w1thermsensor import W1ThermSensor
 from time import gmtime, strftime
 import json
-
+import threading
 
 #create 64bit hash for pi id
 # hash = hashlib.sha1("my message".encode("UTF-8")).hexdigest()
