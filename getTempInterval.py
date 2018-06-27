@@ -17,7 +17,7 @@ import threading
 def gettemp_():
     for sensor in W1ThermSensor.get_available_sensors():
         while True:
-            threading.Timer(5.0, gettemp_).start()
+            threading.Timer(600.0, gettemp_).start()
             unix = int(time.time())
             date = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
  
