@@ -39,6 +39,6 @@ def gettemp_():
 
             return tojson + "  " + date
             
-#gettemp_()             #for debugging
+gettemp_()             #for debugging
             
             
