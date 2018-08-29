@@ -1,0 +1,281 @@
+Traceback (most recent call last):
+  File "getTempInterval.py", line 6, in <module>
+    from w1thermsensor import W1ThermSensor
+  File "/usr/lib/python3/dist-packages/w1thermsensor/__init__.py", line 7, in <module>
+    from .core import W1ThermSensor  # noqa
+  File "/usr/lib/python3/dist-packages/w1thermsensor/core.py", line 314, in <module>
+    load_kernel_modules()
+  File "/usr/lib/python3/dist-packages/w1thermsensor/core.py", line 308, in load_kernel_modules
+    raise KernelModuleLoadError()
+w1thermsensor.errors.KernelModuleLoadError: Cannot load w1 therm kernel modules
+Usage: flask [OPTIONS] COMMAND [ARGS]...
+
+Error: No such command "weatherWebServer.py".
+Usage: flask [OPTIONS] COMMAND [ARGS]...
+
+Error: No such command "weatherWebServer.py".
+Usage: flask [OPTIONS] COMMAND [ARGS]...
+
+Error: No such command "weatherWebServer.py".
+The temperature from new API is 76.2116
+ * Serving Flask app "weatherWebServer" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://192.168.1.209:9000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 267-159-341
+192.168.1.207 - - [28/Aug/2018 06:33:25] "GET / HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:33:25] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:33:38] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 06:36:19] "GET /gethistorypage HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 06:36:19] "GET /stylesheets/style.css HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:36:23] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 06:45:28] "GET /singlepage HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:45:34] "GET /singlepage HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:45:45] "GET /gethistorypage HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 06:45:45] "GET /stylesheets/style.css HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 06:45:46] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 15:08:54] "GET /gethistorypage HTTP/1.1" 200 -
+192.168.1.207 - - [28/Aug/2018 15:08:55] "GET /stylesheets/style.css HTTP/1.1" 404 -
+192.168.1.207 - - [28/Aug/2018 15:08:55] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.211 - - [28/Aug/2018 15:09:18] "GET /gethistorypage HTTP/1.1" 200 -
+192.168.1.211 - - [28/Aug/2018 15:09:21] "GET /stylesheets/style.css HTTP/1.1" 404 -
+192.168.1.211 - - [28/Aug/2018 15:09:22] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.211 - - [28/Aug/2018 15:09:22] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.1 - - [28/Aug/2018 16:17:35] "GET /gethistorypage HTTP/1.1" 200 -
+192.168.1.1 - - [28/Aug/2018 16:17:35] "GET /stylesheets/style.css HTTP/1.1" 404 -
+192.168.1.1 - - [28/Aug/2018 16:17:35] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.1 - - [28/Aug/2018 16:17:36] "GET /gethistory HTTP/1.1" 200 -
+172.58.25.40 - - [28/Aug/2018 17:08:21] "GET /gethistorypage HTTP/1.1" 200 -
+172.58.25.40 - - [28/Aug/2018 17:08:21] "GET /stylesheets/style.css HTTP/1.1" 404 -
+172.58.25.40 - - [28/Aug/2018 17:08:24] "GET /favicon.ico HTTP/1.1" 404 -
+172.58.25.40 - - [28/Aug/2018 17:08:24] "GET /gethistory HTTP/1.1" 200 -
+The temperature from new API is 80.03659999999999
+Usage: flask [OPTIONS] COMMAND [ARGS]...
+
+Error: No such command "weatherWebServer.py".
+The temperature from new API is 80.15
+ * Serving Flask app "weatherWebServer" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://192.168.1.209:9000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 267-159-341
+192.168.1.1 - - [28/Aug/2018 21:44:13] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [28/Aug/2018 21:44:33] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.1 - - [28/Aug/2018 21:44:45] "GET /gettemp HTTP/1.1" 200 -
+172.58.24.46 - - [28/Aug/2018 21:50:00] "GET /favicon.ico HTTP/1.1" 404 -
+172.58.24.46 - - [28/Aug/2018 21:50:12] "GET /gethistory HTTP/1.1" 200 -
+172.58.24.46 - - [28/Aug/2018 21:50:22] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 01:23:43] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 01:23:47] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:04] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:25] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:27] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:27] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:28] "GET /gettemp HTTP/1.1" 200 -
+192.168.1.1 - - [29/Aug/2018 05:08:29] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.IntegrityError: UNIQUE constraint failed: timetemp.time
+192.168.1.1 - - [29/Aug/2018 05:08:36] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.OperationalError: database is locked
+192.168.1.1 - - [29/Aug/2018 05:08:42] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.OperationalError: database is locked
+192.168.1.1 - - [29/Aug/2018 05:08:53] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.OperationalError: database is locked
+192.168.1.206 - - [29/Aug/2018 05:09:11] "GET /gethistory HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:13] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.206 - - [29/Aug/2018 05:09:21] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.OperationalError: database is locked
+192.168.1.206 - - [29/Aug/2018 05:09:21] "GET /gettemp?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:21] "GET /gettemp?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:21] "GET /gettemp?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:22] "GET /gettemp?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:22] "GET /gettemp?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:09:22] "GET /gettemp?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:14:06] "GET /gettemp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/WeatherStation/weatherWebServer.py", line 19, in get_temp
+    j = gettemp.gettemp_()
+  File "/home/pi/WeatherStation/gettemp.py", line 37, in gettemp_
+    VALUES(?,?)''', (date, temperature_in_fahrenheit))
+sqlite3.OperationalError: database is locked
+192.168.1.206 - - [29/Aug/2018 05:14:06] "GET /gettemp?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:14:06] "GET /gettemp?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:14:06] "GET /gettemp?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:14:07] "GET /gettemp?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+192.168.1.206 - - [29/Aug/2018 05:14:07] "GET /gettemp?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
