@@ -5,7 +5,7 @@ import gettemp
 from flask import jsonify
 from flask import Flask, request, render_template #import main Flask class and request object
 from flask_cors import CORS
-from WeatherStation.TempFunctions.getTempAve import getTempAve
+from getTempAve
 
 
 app = Flask(__name__) #create the Flask app
