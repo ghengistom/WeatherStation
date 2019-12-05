@@ -18,7 +18,7 @@ def getTempAve():
 
   #print(data)
   #return toJson
-  return data
+  return toJson
 
 #THis is the schema of the timetemp table
 #   CREATE TABLE timetemp (
