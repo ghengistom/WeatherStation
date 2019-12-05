@@ -5,7 +5,8 @@ import gettemp
 from flask import jsonify
 from flask import Flask, request, render_template #import main Flask class and request object
 from flask_cors import CORS
-import TempFunctions/getTempAve
+from WeatherStation.TempFunctions.getTempAve import getTempAve
+
 
 app = Flask(__name__) #create the Flask app
 CORS(app)
@@ -36,7 +37,7 @@ def get_historypage():
 
 @app.rout('/gettempave', methods=['GET'])
 def get_tempAve():
-    tempave = getTempAve.getTempAve
+    tempave = getTempAve.getTempAve()
     return jsonify(tempave)
 
 
