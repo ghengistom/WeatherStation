@@ -26,7 +26,7 @@ def gettemp_():
             temperature_in_fahrenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)         
        
             #print('Print jsonTest '  + str(jsonTest))
-            print('The temperature from new API is '+ str(temperature_in_fahrenheit))
+            #print('The temperature from new API is '+ str(temperature_in_fahrenheit))
             #print('This is the temp is all units' + str(temperature_in_all_units))
 
             tojson = json.dumps(temperature_in_fahrenheit)

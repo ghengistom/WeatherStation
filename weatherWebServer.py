@@ -5,6 +5,7 @@ import gettemp
 from flask import jsonify
 from flask import Flask, request, render_template #import main Flask class and request object
 from flask_cors import CORS
+import ./TempFunctions/getTempAve
 
 app = Flask(__name__) #create the Flask app
 CORS(app)
@@ -32,6 +33,11 @@ def singlePage():
 @app.route('/gethistorypage', methods=['GET'])
 def get_historypage():
     return render_template('gethistory.html')
+
+@app.rout('/gettempave', methods=['GET'])
+def get_tempAve():
+    tempave = getTempAve.getTempAve
+    return jsonify(tempave)
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
