@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import getHistoryModel
 import gettemp
 from flask import jsonify
@@ -40,6 +42,6 @@ def test1():
 
 if __name__ == '__main__':
     context = ('ca-certificates.crt', 'privateKey.key')
-    app.run(threaded = True, host='192.168.1.209', port = 9000, debug = True)
+    app.run( threaded = True, host='0.0.0.0', port = 9000, debug = False )
 # if __name__ == '__main__':
 #     app.run(debug=True, port=5000) #run app in debug mode on port 5000
