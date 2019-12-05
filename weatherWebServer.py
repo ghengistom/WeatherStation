@@ -35,7 +35,7 @@ def singlePage():
 def get_historypage():
     return render_template('gethistory.html')
 
-@app.rout('/gettempave', methods=['GET'])
+@app.route('/gettempave', methods=['GET'])
 def get_tempAve():
     tempave = getTempAve.getTempAve()
     return jsonify(tempave)
