@@ -13,8 +13,8 @@ def getTempAve():
   #c.execute(" SELECT CONVERT(date, SELECT time from timetemp")
   #c.execute("SELECT * FROM timetemp where temp like '%7%'")
 
-  dt = datetime.datetime.now().date()
-  print(dt)
+  #dt = datetime.datetime.now().date()
+  #print(dt)
 
   c.execute("Select CAST(time as date), AVG(temp) From timetemp Group By CAST(time as date)")
   #c.execute("SELECT AVG(temp) FROM timetemp where time like 'dt' ")#GROUP BY CAST(time as date)")
@@ -23,11 +23,11 @@ def getTempAve():
 
   toJson = json.dumps(data)
 
-  print(data)
+  #print(data)
   #return toJson
   return toJson
 
-getTempAve()
+#getTempAve()
 #THis is the schema of the timetemp table
 #   CREATE TABLE timetemp (
 # time text PRIMARY KEY,
