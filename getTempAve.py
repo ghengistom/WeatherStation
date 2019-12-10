@@ -16,7 +16,7 @@ def getTempAve():
 
   toJson = json.dumps(data)
 
-  #print(data)
+  print(data)
   #return toJson
   return toJson
 
