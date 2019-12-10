@@ -10,7 +10,7 @@ def getTempAve():
 
 #SELECT CONVERT(date, getdate())
 
-  c.execute(""" SELECT CONVERT(date, SELECT time from timetemp""")
+  c.execute(" SELECT CONVERT(date, SELECT time from timetemp)
   data=c.fetchall()
   conn.close()
 
