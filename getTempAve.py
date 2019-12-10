@@ -11,7 +11,7 @@ def getTempAve():
 #SELECT CONVERT(date, getdate())
 
   #c.execute(" SELECT CONVERT(date, SELECT time from timetemp")
-  c.execute("SELECT * FROM timetem where temp like '%7%'")
+  c.execute("SELECT * FROM timetemp where temp like '%7%'")
   data=c.fetchall()
   conn.close()
 
