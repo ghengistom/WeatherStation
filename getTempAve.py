@@ -14,6 +14,7 @@ def getTempAve():
   #c.execute("SELECT * FROM timetemp where temp like '%7%'")
 
   dt = datetime.datetime.now().date()
+  print(dt)
 
   #c.execute("Select CAST(time as date), AVG(temp) From timetemp Group By CAST(time as date)")
   c.execute("SELECT *, AVG(temp) FROM timetemp where time like 'dt' GROUP BY CAST(time as date)")
