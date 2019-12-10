@@ -17,7 +17,7 @@ def getTempAve():
   print(dt)
 
   #c.execute("Select CAST(time as date), AVG(temp) From timetemp Group By CAST(time as date)")
-  c.execute("SELECT *, AVG(temp) FROM timetemp where time like 'dt' GROUP BY CAST(time as date)")
+  c.execute("SELECT *, AVG(temp) FROM timetemp where time like 'dt' ")#GROUP BY CAST(time as date)")
   data=c.fetchall()
   conn.close()
 
