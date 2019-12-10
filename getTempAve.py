@@ -20,7 +20,7 @@ def getTempAve():
   #return toJson
   return toJson
 
-getTempAve
+getTempAve()
 #THis is the schema of the timetemp table
 #   CREATE TABLE timetemp (
 # time text PRIMARY KEY,
