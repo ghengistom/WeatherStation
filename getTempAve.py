@@ -12,7 +12,7 @@ def getTempAve():
 
   #c.execute(" SELECT CONVERT(date, SELECT time from timetemp")
   #c.execute("SELECT * FROM timetemp where temp like '%7%'")
-  c.execute("Select CAST(time as date), AVG(temp) From Table timetemp By CAST(time as date)")
+  c.execute("Select CAST(time as date), AVG(temp) From timetemp Group By CAST(time as date)")
   data=c.fetchall()
   conn.close()
 
