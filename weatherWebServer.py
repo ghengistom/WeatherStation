@@ -38,7 +38,7 @@ def get_historypage():
 @app.route('/gettempave', methods=['GET'])
 def get_tempAve():
     tempave = getTempAve.getTempAve()
-    return jsonify(tempave)
+    return tempave
 
 
 @app.route('/test1', methods=['GET']) #GET requests will be blocked
