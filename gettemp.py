@@ -40,7 +40,7 @@ def gettemp_():
             c.execute('''INSERT INTO timetemp( time, temp )
                    VALUES(?,?)''', (date, temperature_in_fahrenheit))
             conn.commit()
-            c.execute(""" select * from timetemp limit 1 """)
+            c.execute(""" select * from timetemp order by asc limit 1 """)
             data = c.fetchall()
             conn.close()
 
