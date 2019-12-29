@@ -41,7 +41,7 @@ def gettemp_():
                    VALUES(?,?)''', (date, temperature_in_fahrenheit))
             conn.commit()
             c.execute(""" select 1 from timetemp """)
-            data = c.fetchone()
+            data = c.fetchone()[0]
             conn.close()
 
             #return tojson + "  " + date
