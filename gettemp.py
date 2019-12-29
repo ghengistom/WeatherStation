@@ -13,6 +13,9 @@ import json
 # print(hash)
 # print(len(hash))
 
+def double_quote(word):
+    return '"%s"' % word
+
 
 def gettemp_():
     for sensor in W1ThermSensor.get_available_sensors():
@@ -30,15 +33,19 @@ def gettemp_():
             #print('This is the temp is all units' + str(temperature_in_all_units))
 
             tojson = json.dumps(temperature_in_fahrenheit)
+
             #insert a row of data into local db
             conn = sqlite3.connect('weatherdatabase.db')
             c = conn.cursor()
             c.execute('''INSERT INTO timetemp( time, temp )
                    VALUES(?,?)''', (date, temperature_in_fahrenheit))
             conn.commit()
+            c.execute(""" select 1 from timetemp """)
+            data = c.fetchall()
             conn.close()
 
-            return tojson + "  " + date
+            #return tojson + "  " + date
+            return data
             
 #gettemp_()             #for debugging
             
