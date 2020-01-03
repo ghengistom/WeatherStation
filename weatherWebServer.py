@@ -23,27 +23,11 @@ def get_temp():
     j = gettemp.gettemp_()
     return jsonify(j)
 
-@app.route('/SinglePage', methods=['GET'])
-def singlePage():
-    return render_template('singlePage.html')
-    #response = render_template('singlePage.html')
-    #response.headers.add('Access-Control-Allow-Origin', '*')
-    #return response
-    
-
-@app.route('/gethistorypage', methods=['GET'])
-def get_historypage():
-    return render_template('gethistory.html')
 
 @app.route('/gettempave', methods=['GET'])
 def get_tempAve():
     tempave = getTempAve.getTempAve()
     return tempave
-
-
-@app.route('/test1', methods=['GET']) #GET requests will be blocked
-def test1():
-    return 'Todo...'   #need to call getHistoryModel.py then return json 
 
 
 
